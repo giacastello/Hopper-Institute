@@ -1,0 +1,13 @@
+$pink: rgb(236, 159, 236) !default;
+$blue: rgb(37, 183, 228) !default;
+$black: #000 !default;
+
+body {
+    background-color: $pink;
+    h1 {
+        color: $blue;
+    }
+    p {
+        color: $black;
+    }
+}
