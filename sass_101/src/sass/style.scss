@@ -1,13 +1,94 @@
-$pink: rgb(236, 159, 236) !default;
-$blue: rgb(37, 183, 228) !default;
-$black: #000 !default;
+/* Syntactically Awesome Style Sheets*/
 
-body {
-    background-color: $pink;
-    h1 {
-        color: $blue;
+@import '_variables.scss';
+
+
+    .container {
+        width: 80%;
+        height: 300px;
+        background-color: $pink;
+        margin: 0 auto;
     }
-    p {
-        color: $black;
+
+    nav{
+        .magos{
+            float: left;
+            text-align: center;
+            width: 30%;
+            background-color: $black;
+            height: 70px;
+            color: white;
+            &.uno{
+                &:hover{
+                    background-color: $pink;
+                }
+                &:focus{
+                    background-color: aliceblue;
+                }
+            }
+            &.dos{
+                &:hover{
+                    background-color: $blue;
+                }
+                &:focus{
+                    background-color: aliceblue;
+                }
+            }
+            &.tres{
+                &:hover{
+                    background-color: $green;
+                }
+                &:focus{
+                    background-color: aliceblue;
+                }
+            }
+        }
     }
-}
+    .texto1{
+        $orange: #faa609; //variable local. Esta pisa a la global.
+        color: $orange;
+        font-family: $first-font;
+    }
+  
+    .btn {
+        padding: 20px;
+        border-radius: 100%;
+
+        &.btna{
+            background-color: $pink;
+            &:hover{
+                background-color: aliceblue;
+            }
+            &:focus{
+                padding: 100px;
+            }
+        }
+        &.btne{
+            background-color: $blue;
+            &:hover{
+                background-color: aliceblue;
+            }
+            &:focus{
+                padding: 100px;
+            }
+        }
+        &.btni{
+            background-color: $grey;
+            &:hover{
+                background-color: aliceblue;
+            }
+            &:focus{
+                padding: 100px;
+            }
+        }
+        &.btno{
+            background-color: $green;
+            &:hover{
+                background-color: aliceblue;
+            }
+            &:focus{
+                padding: 100px;
+            }
+        }
+    }
+    
