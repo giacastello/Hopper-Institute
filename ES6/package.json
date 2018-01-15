@@ -1,0 +1,14 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "holi.js",
+  "scripts": {
+    "babel": "babel clases.js --out-file compile.js" // generar un output en archivo nuevo
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
