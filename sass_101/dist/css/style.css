@@ -1,4 +1,9 @@
+@charset "UTF-8";
 /* Syntactically Awesome Style Sheets*/
+/* Un mixin es una función que permite reutilizar bloques de css.
+Con los mixins empieza la lógica de SASS. 
+Los usos que se les puede dar son muchos. 
+El más conocido es el que se usa para los prefijos de los browsers.  */
 .container {
   width: 80%;
   height: 300px;
@@ -49,10 +54,40 @@ nav .magos {
     .btn.btni:hover {
       background-color: aliceblue; }
     .btn.btni:focus {
-      padding: 100px; }
+      padding: 100px;
+      background-color: aqua; }
   .btn.btno {
     background-color: #45c5c5; }
     .btn.btno:hover {
       background-color: aliceblue; }
     .btn.btno:focus {
       padding: 100px; }
+
+.btn1 {
+  padding: 2px 1px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: rgba(103, 12, 121, 0.473); }
+  .btn1:hover:not(_disabled) {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8); }
+  .btn1:disabled {
+    color: #666;
+    opacity: 0.5; }
+
+.theme-1 .btn-rey {
+  background-color: #bd4f93;
+  border-color: #792d5c; }
+  .theme-1 .btn-rey:hover {
+    background: #d999c1; }
+
+.theme-1 .btn-reina {
+  background-color: #b8bd4f;
+  border-color: #75792d; }
+  .theme-1 .btn-reina:hover {
+    background: #d6d999; }
+
+.theme-1 .btn-princesa {
+  background-color: #4f6ebd;
+  border-color: #2d4379; }
+  .theme-1 .btn-princesa:hover {
+    background: #99abd9; }

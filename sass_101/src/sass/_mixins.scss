@@ -1,0 +1,37 @@
+/* Un mixin es una función que permite reutilizar bloques de css.
+Con los mixins empieza la lógica de SASS. 
+Los usos que se les puede dar son muchos. 
+El más conocido es el que se usa para los prefijos de los browsers.  */
+
+
+@mixin theme ($primary-color, $rotate:120deg, $percent:20%) { //parámetros
+    $other-color: adjust-hue($primary-color, $rotate); //Creamos variables de color que sean complementarias ajustando el hue y la rotación.
+    $secondary-color: adjust-hue($primary-color,-$rotate);
+    
+    .btn-rey{
+        background-color: $primary-color;
+        border-color: darken($primary-color, $percent);
+        &:hover {
+            background: lighten($primary-color, $percent);
+        }
+    }
+    .btn-reina{ // other-color
+        background-color: $other-color;
+        border-color: darken($other-color, $percent);
+        &:hover {
+            background: lighten($other-color, $percent);
+        }
+    }
+
+    .btn-princesa { // $secondary-color
+        background-color: $secondary-color;
+        border-color: darken($secondary-color, $percent);
+        &:hover {
+            background: lighten($secondary-color, $percent);
+        }
+    }
+
+}
+
+
+
